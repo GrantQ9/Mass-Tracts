@@ -1,5 +1,21 @@
 ---
-title: "TractDoc"
+title: "Massachusets Tract Anaylsis"
 author: "Grant Quattlebaum"
 format: html
 ---
+
+```{r}
+#| echo: false
+#| message: false
+#| label: setup
+
+library(tidyverse)
+mTracts <- read_csv("data/mass-tracts.csv")
+```
+
+```{r}
+mTracts |> ggplot(aes(x = med_income)) + 
+  geom_histogram()
+
+```
+
